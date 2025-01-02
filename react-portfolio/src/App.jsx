@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Navigation, Homepage } from './Components';
+import { Navigation, Homepage, Education, Skills } from './Components';
 import './App.css'
 
 function Layout() {
@@ -19,9 +19,17 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: 'home',
+        path: '',
         element: <Homepage />,
-      }
+      },
+      {
+        path: 'education',
+        element: <Education />,
+      },
+      {
+        path: 'skills',
+        element: <Skills />,
+      },
     ]
   }
 ]);
